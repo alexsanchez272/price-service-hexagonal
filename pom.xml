@@ -30,6 +30,9 @@
 		<java.version>17</java.version>
 		<open-api.version>2.7.0</open-api.version>
 		<lombok.version>1.18.30</lombok.version>
+		<cucumber-spring.version>7.20.1</cucumber-spring.version>
+		<rest-assured.version>5.5.0</rest-assured.version>
+		<junit-platform-suite.version>1.11.4</junit-platform-suite.version>
 
 		<!--checking for lombok with javadoc error-->
 		<maven.javadoc.skip>true</maven.javadoc.skip>
@@ -86,8 +89,42 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-suite</artifactId>
+			<version>${junit-platform-suite.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Cucumber dependencies -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber-spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-spring</artifactId>
+			<version>${cucumber-spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit-platform-engine</artifactId>
+			<version>${cucumber-spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- RestAssured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>${rest-assured.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
