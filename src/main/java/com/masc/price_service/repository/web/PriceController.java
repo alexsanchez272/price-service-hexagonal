@@ -4,6 +4,7 @@ import com.masc.price_service.application.services.PriceService;
 import com.masc.price_service.domain.models.Price;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping("/api/prices")
+@Tag(name = "Price", description = "The Price API")
 public class PriceController {
 
     private final PriceService priceService;
@@ -32,8 +34,8 @@ public class PriceController {
             @Parameter(description = "ID of the product to retrieve the price for", example = "35455")
             @RequestParam @NotNull @Min(1) Long productId,
 
-            @Parameter(description = "Application date for the price retrieval (format: yyyy-MM-dd'T'HH:mm:ss)")
-            @RequestParam @NotNull @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime startDate) {
+            @Parameter(description = "Application date (format: yyyy-MM-dd HH:mm:ss)", example = "2020-06-14 10:00:00")
+            @RequestParam @NotNull @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") LocalDateTime startDate) {
 
         Price response = priceService.getPrice(brandId, productId, startDate);
         return ResponseEntity.ok(response);
