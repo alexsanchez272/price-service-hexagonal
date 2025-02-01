@@ -152,7 +152,8 @@ GET /api/prices?startDate=2020-06-14T10:00:00&productId=35455&brandId=1
 - All endpoints: `http://localhost:8080/actuator`
 
 ## OpenAPI Specification
-Generated `openapi.json` file location: `target/openapi.json` (after build)
+- Generated `openapi.json` 
+- File location: `target/openapi.json` (after build)
 
 ---
 
