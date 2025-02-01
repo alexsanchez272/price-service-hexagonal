@@ -1,9 +1,11 @@
 # Price Service
 
 ## Overview
-This Spring Boot application provides a REST API for retrieving pricing information from an e-commerce database. 
-It implements hexagonal architecture for clean code organization, follows an API-first approach,
-and uses Swagger for API documentation.
+This Spring Boot application provides a REST API for retrieving pricing information from an e-commerce database.
+It implements hexagonal architecture for clean code organization, follows an API-first approach, and uses Swagger for API documentation.
+
+For a detailed description of the service requirements, including the business rules, data model, and testing strategy, refer to the [RFC_PRICE_SERVICE.md](RFC_PRICE_SERVICE.md) file. 
+The RFC outlines the functional specifications, technical design, and implementation guidelines for this service.
 
 ## Features
 - REST endpoint for price consultation
