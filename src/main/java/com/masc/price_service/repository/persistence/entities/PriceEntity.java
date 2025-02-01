@@ -52,18 +52,4 @@ public class PriceEntity {
         price.setCurrency(this.currency);
         return price;
     }
-
-    public static PriceEntity fromDomainModel(Price price) {
-        PriceEntity entity = new PriceEntity();
-        entity.setId(price.getId());
-        entity.setBrandId(price.getBrandId());
-        entity.setStartDate(price.getStartDate());
-        entity.setEndDate(price.getEndDate());
-        entity.setPriceList(price.getPriceList());
-        entity.setProductId(price.getProductId());
-        entity.setPriority(price.getPriority());
-        entity.setPrice(price.getPrice());
-        entity.setCurrency(price.getCurrency());
-        return entity;
-    }
 }
