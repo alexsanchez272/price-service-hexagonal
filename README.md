@@ -15,7 +15,7 @@ and uses Swagger for API documentation.
 
 ## Technologies
 - Java 17
-- Spring Boot 3.1.0
+- Spring Boot 3.4.2
 - H2 Database
 - SpringDoc OpenAPI (Swagger)
 - RestAssured
