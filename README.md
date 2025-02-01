@@ -147,6 +147,22 @@ GET /api/prices?startDate={date}&productId={id}&brandId={id}
 GET /api/prices?startDate=2020-06-14T10:00:00&productId=35455&brandId=1
 ```
 
+## HTTP Request Example Cases
+This project includes HTTP request files that can be executed directly from IntelliJ IDEA:
+
+1. `src/test/http/get_price.http`: Tests retrieving valid prices for various scenarios:
+   - Tests the error handling for a non-existent price.
+   - Different time points for the same product and brand
+   - Different products and brands
+   - Edge cases at the start and end of price ranges
+
+To run these tests:
+1. Ensure the application is running.
+2. Open `get_price.http` file in IntelliJ IDEA.
+3. Click the green "play" button next to each request to execute it individually, or use the "Run All Requests" option to execute all requests in the file.
+
+These tests provide a quick way to verify the API's functionality, including its handling of various valid scenarios and error conditions.
+
 ## Actuator Endpoints
 - Health check: `http://localhost:8080/actuator/health`
 - All endpoints: `http://localhost:8080/actuator`

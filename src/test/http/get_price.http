@@ -1,0 +1,39 @@
+### Get Non-existent Price
+GET http://localhost:8080/api/prices?brandId=1&productId=99999&startDate=2020-06-14 10:00:00
+Accept: application/json
+
+### Get Valid Price - Case 1: 2020-06-14 10:00:00
+GET http://localhost:8080/api/prices?brandId=1&productId=35455&startDate=2020-06-14 10:00:00
+Accept: application/json
+
+### Get Valid Price - Case 2: 2020-06-14 16:00:00
+GET http://localhost:8080/api/prices?brandId=1&productId=35455&startDate=2020-06-14 16:00:00
+Accept: application/json
+
+### Get Valid Price - Case 3: 2020-06-14 21:00:00
+GET http://localhost:8080/api/prices?brandId=1&productId=35455&startDate=2020-06-14 21:00:00
+Accept: application/json
+
+### Get Valid Price - Case 4: 2020-06-15 10:00:00
+GET http://localhost:8080/api/prices?brandId=1&productId=35455&startDate=2020-06-15 10:00:00
+Accept: application/json
+
+### Get Valid Price - Case 5: 2020-06-16 21:00:00
+GET http://localhost:8080/api/prices?brandId=1&productId=35455&startDate=2020-06-16 21:00:00
+Accept: application/json
+
+### Get Valid Price - Different Product: 2020-06-14 10:00:00
+GET http://localhost:8080/api/prices?brandId=1&productId=35456&startDate=2020-06-14 10:00:00
+Accept: application/json
+
+### Get Valid Price - Different Brand: 2020-06-14 10:00:00
+GET http://localhost:8080/api/prices?brandId=2&productId=35455&startDate=2020-06-14 10:00:00
+Accept: application/json
+
+### Get Valid Price - Edge Case: Start of a Price Range
+GET http://localhost:8080/api/prices?brandId=1&productId=35455&startDate=2020-06-15 00:00:00
+Accept: application/json
+
+### Get Valid Price - Edge Case: End of a Price Range
+GET http://localhost:8080/api/prices?brandId=1&productId=35455&startDate=2020-06-14 23:59:59
+Accept: application/json
