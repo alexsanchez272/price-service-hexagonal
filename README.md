@@ -117,6 +117,24 @@ mvn test
 mvn test -Dtest=CucumberTest
 ```
 
+## Code Coverage
+
+This project uses JaCoCo for code coverage analysis. To generate the coverage report:
+
+1. Run the tests with coverage:
+   ```bash
+   mvn clean test
+   ```
+
+2. Generate the JaCoCo report:
+   ```bash
+   mvn jacoco:report
+   ```
+
+3. The coverage report will be generated in the `target/site/jacoco` directory. Open the `index.html` file in a web browser to view the report.
+
+You can also configure your IDE to show coverage information inline with your code. Refer to your IDE's documentation for instructions on integrating JaCoCo.
+
 ## API Usage
 
 **Endpoint:**
