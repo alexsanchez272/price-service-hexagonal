@@ -31,8 +31,9 @@ price-service/
 │   │   ├── java/com/masc/price_service/
 │   │   │   ├── domain/
 │   │   │   │   ├── models/
-│   │   │   │   ├── ports/in/
-│   │   │   │   ├── ports/out/
+│   │   │   │   ├── ports/
+│   │   │   │   │   ├── in/
+│   │   │   │   │   ├── out/
 │   │   │   │   ├── exceptions/
 │   │   │   ├── application/
 │   │   │   │   ├── services/
