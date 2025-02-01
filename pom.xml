@@ -33,6 +33,7 @@
 		<cucumber-spring.version>7.20.1</cucumber-spring.version>
 		<rest-assured.version>5.5.0</rest-assured.version>
 		<junit-platform-suite.version>1.11.4</junit-platform-suite.version>
+		<jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
 
 		<!--checking for lombok with javadoc error-->
 		<maven.javadoc.skip>true</maven.javadoc.skip>
@@ -166,6 +167,7 @@
 				</configuration>
 			</plugin>
 
+			<!-- SpringDoc Plugin -->
 			<plugin>
 				<groupId>org.springdoc</groupId>
 				<artifactId>springdoc-openapi-maven-plugin</artifactId>
@@ -185,6 +187,7 @@
 				</configuration>
 			</plugin>
 
+			<!-- JaCoCo Plugin -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -203,6 +206,12 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<!-- Exclude model classes (POJO's) -->
+					<excludes>
+						<exclude>**/domain/models/**/*</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

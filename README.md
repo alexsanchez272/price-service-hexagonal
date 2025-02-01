@@ -133,8 +133,6 @@ This project uses JaCoCo for code coverage analysis. To generate the coverage re
 
 3. The coverage report will be generated in the `target/site/jacoco` directory. Open the `index.html` file in a web browser to view the report.
 
-You can also configure your IDE to show coverage information inline with your code. Refer to your IDE's documentation for instructions on integrating JaCoCo.
-
 ## API Usage
 
 **Endpoint:**

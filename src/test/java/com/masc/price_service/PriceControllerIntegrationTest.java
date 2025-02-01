@@ -65,6 +65,16 @@ class PriceControllerIntegrationTest {
     }
 
     @Test
+    void shouldReturnNotFoundStatusWhenProductIdIsInvalid() throws Exception {
+        mockMvc.perform(get("/api/prices")
+                        .param("brandId", "1")
+                        .param("productId", "35456")
+                        .param("startDate", "2020-06-16 21:00:00"))
+                .andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.status").value(404));
+    }
+
+    @Test
     void shouldReturnPriceList1When_RequestedAt10AMOnJune14() throws Exception {
         mockMvc.perform(get("/api/prices")
                         .param("brandId", "1")
@@ -104,7 +114,7 @@ class PriceControllerIntegrationTest {
     }
 
     @Test
-    void shouldReturnPriceList4When_RequestedAt9PMOnJune16() throws Exception {
+    void shouldReturnPriceList3When_RequestedAt9PMOnJune16() throws Exception {
         mockMvc.perform(get("/api/prices")
                         .param("brandId", "1")
                         .param("productId", "35455")
@@ -117,7 +127,7 @@ class PriceControllerIntegrationTest {
     }
 
     @Test
-    void test5_getPriceAt9PMJune16() throws Exception {
+    void shouldReturnPriceList4When_RequestedAt9PMJune16() throws Exception {
         mockMvc.perform(get("/api/prices")
                         .param("brandId", "1")
                         .param("productId", "35455")
