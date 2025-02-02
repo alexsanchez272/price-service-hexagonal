@@ -1,4 +1,4 @@
-package com.masc.price_service.repository.persistence.entities;
+package com.masc.price_service.infrastructure.persistence.entities;
 
 import com.masc.price_service.domain.models.Price;
 import jakarta.persistence.*;

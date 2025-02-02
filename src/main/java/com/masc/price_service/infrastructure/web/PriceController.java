@@ -1,4 +1,4 @@
-package com.masc.price_service.repository.web;
+package com.masc.price_service.infrastructure.web;
 
 import com.masc.price_service.application.services.PriceService;
 import com.masc.price_service.domain.models.Price;

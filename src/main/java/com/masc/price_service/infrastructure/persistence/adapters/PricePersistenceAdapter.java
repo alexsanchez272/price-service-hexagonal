@@ -1,9 +1,9 @@
-package com.masc.price_service.repository.persistence.adapters;
+package com.masc.price_service.infrastructure.persistence.adapters;
 
 import com.masc.price_service.domain.models.Price;
 import com.masc.price_service.domain.ports.out.PriceRepositoryPort;
-import com.masc.price_service.repository.persistence.entities.PriceEntity;
-import com.masc.price_service.repository.persistence.repositories.PriceRepository;
+import com.masc.price_service.infrastructure.persistence.entities.PriceEntity;
+import com.masc.price_service.infrastructure.persistence.repositories.PriceRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Component;
 

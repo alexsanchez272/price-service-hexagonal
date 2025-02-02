@@ -1,7 +1,7 @@
 package com.masc.price_service;
 
-import com.masc.price_service.repository.persistence.entities.PriceEntity;
-import com.masc.price_service.repository.persistence.repositories.PriceRepository;
+import com.masc.price_service.infrastructure.persistence.entities.PriceEntity;
+import com.masc.price_service.infrastructure.persistence.repositories.PriceRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

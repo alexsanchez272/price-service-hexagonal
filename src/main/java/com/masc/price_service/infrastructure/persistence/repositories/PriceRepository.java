@@ -1,6 +1,6 @@
-package com.masc.price_service.repository.persistence.repositories;
+package com.masc.price_service.infrastructure.persistence.repositories;
 
-import com.masc.price_service.repository.persistence.entities.PriceEntity;
+import com.masc.price_service.infrastructure.persistence.entities.PriceEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

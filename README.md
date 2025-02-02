@@ -40,7 +40,7 @@ price-service/
 │   │   │   ├── application/
 │   │   │   │   ├── services/
 │   │   │   │   ├── usecases/
-│   │   │   ├── repository/
+│   │   │   ├── infrastructure/
 │   │   │   │   ├── persistence/
 │   │   │   │   │   ├── adapters/
 │   │   │   │   │   ├── entities/
